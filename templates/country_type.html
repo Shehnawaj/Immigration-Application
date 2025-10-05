@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Countries - Immigration Portal</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* =============================
+       Glassmorphism Flag Section
+    ============================== */
+    .flags-circle-section {
+      background: rgba(255,255,0, 0.4);
+      position: relative;
+      padding: 120px 0;
+    }
+
+    .flags-circle {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      border-radius: 50%;
+      width: 300px;
+      height: 300px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .flags-circle img {
+      position: absolute;
+      width: 60px;
+      height: 35px;
+      border: 2px solid #fff;
+      border-radius: 5px;
+      opacity: 0;
+      transform: translate(0,0) scale(0.5);
+      animation: spread 2s forwards;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .flags-circle img:hover {
+      transform: scale(1.2);
+      box-shadow: 0 0 20px rgba(255,255,255,0.7);
+    }
+
+    .flags-circle img:nth-child(1) { animation-delay: 0.3s; --x:0px; --y:-120px; }
+    .flags-circle img:nth-child(2) { animation-delay: 0.6s; --x:90px; --y:-90px; }
+    .flags-circle img:nth-child(3) { animation-delay: 0.9s; --x:120px; --y:0px; }
+    .flags-circle img:nth-child(4) { animation-delay: 1.2s; --x:90px; --y:90px; }
+    .flags-circle img:nth-child(5) { animation-delay: 1.5s; --x:0px; --y:120px; }
+    .flags-circle img:nth-child(6) { animation-delay: 1.8s; --x:-90px; --y:90px; }
+    .flags-circle img:nth-child(7) { animation-delay: 2.1s; --x:-120px; --y:0px; }
+    .flags-circle img:nth-child(8) { animation-delay: 2.4s; --x:-90px; --y:-90px; }
+
+    @keyframes spread {
+      0% { opacity: 0; transform: scale(0.5) translate(0,0); }
+      100% { opacity: 1; transform: scale(1) translate(var(--x), var(--y)); }
+    }
+
+    /* =============================
+       Country List
+    ============================== */
+    .country-list {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .country-list button {
+      background: transparent;
+      border: none;
+      margin: 10px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+    .country-list button:hover {
+      color: orange;
+    }
+
+    /* =============================
+       Hero Section with Video
+    ============================== */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+    }
+    .hero video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top:0; left:0;
+      width:100%; height:100%;
+      background: rgba(0,0,0,0.4);
+      z-index:1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 20px;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+    }
+    .hero p {
+      font-size: 1.2rem;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    }
+
+    /* =============================
+       Marquee Offers
+    ============================== */
+    .marquee {
+      background: #000;
+      color: #fff;
+      padding: 10px;
+      font-weight: bold;
+    }
+
+    /* =============================
+       Visa Steps Section
+    ============================== */
+    .visa-steps {
+      background: #f8f9fa;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .visa-steps h2 {
+      margin-bottom: 30px;
+    }
+    .step {
+      background: #000;
+      color: #fff;
+      padding: 20px;
+      margin: 20px auto;
+      border-radius: 10px;
+      max-width: 600px;
+      opacity: 0;
+      transform: translateY(50px);
+      animation: fadeUp 1s forwards;
+    }
+    .step:nth-child(1) { animation-delay: 0.3s; }
+    .step:nth-child(2) { animation-delay: 0.6s; }
+    .step:nth-child(3) { animation-delay: 0.9s; }
+    .step:nth-child(4) { animation-delay: 1.2s; }
+
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Flags Circle Section -->
+  <section class="flags-circle-section">
+    <div class="flags-circle">
+      <img src="https://flagcdn.com/w40/au.png" alt="Australia" title="Australia" onclick="selectCountry('australia')">
+      <img src="https://flagcdn.com/w40/ca.png" alt="Canada" title="Canada" onclick="selectCountry('canada')">
+      <img src="https://flagcdn.com/w40/us.png" alt="USA" title="USA" onclick="selectCountry('usa')">
+      <img src="https://flagcdn.com/w40/gb.png" alt="UK" title="UK" onclick="selectCountry('uk')">
+      <img src="https://flagcdn.com/w40/nz.png" alt="New Zealand" title="New Zealand" onclick="selectCountry('newzealand')">
+      <img src="https://flagcdn.com/w40/de.png" alt="Germany" title="Germany" onclick="selectCountry('germany')">
+      <img src="https://flagcdn.com/w40/eu.png" alt="Europe" title="Europe" onclick="selectCountry('europe')">
+      <img src="https://flagcdn.com/w40/sg.png" alt="Singapore" title="Singapore" onclick="selectCountry('singapore')">
+    </div>
+  </section>
+
+  <!-- Country List -->
+  <div class="country-list">
+    <button onclick="selectCountry('australia')">Australia</button>
+    <button onclick="selectCountry('canada')">Canada</button>
+    <button onclick="selectCountry('usa')">USA</button>
+    <button onclick="selectCountry('uk')">UK</button>
+    <button onclick="selectCountry('newzealand')">New Zealand</button>
+    <button onclick="selectCountry('germany')">Germany</button>
+    <button onclick="selectCountry('europe')">Europe</button>
+    <button onclick="selectCountry('singapore')">Singapore</button>
+  </div>
+
+  <!-- Hero Section with Video -->
+  <section class="hero" id="hero">
+    <video autoplay muted loop id="hero-video">
+      <source src="/static/iar_Land.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-content">
+      <h1 id="hero-title">Explore Immigration Opportunities</h1>
+      <p id="hero-text">Learn about visa options, requirements, and benefits for your dream country.</p>
+    </div>
+  </section>
+
+  <!-- Marquee Offers -->
+  <div class="marquee">
+    <marquee behavior="scroll" direction="left" id="marquee-text">
+      🎉 Special Offers: Discounted Visa Guidance | Priority Processing for Students | Free Counseling Session!
+    </marquee>
+  </div>
+
+  <!-- Visa Steps Section -->
+  <section class="visa-steps">
+    <h2>Visa Process - Step by Step</h2>
+    <div class="step">📑 Step 1: Fill out your application form with personal details.</div>
+    <div class="step">📂 Step 2: Collect and upload required documents (passport, photos, proof of funds).</div>
+    <div class="step">🎤 Step 3: Attend the visa interview at the embassy or online.</div>
+    <div class="step">✈️ Step 4: Receive your visa approval and prepare for travel.</div>
+  </section>
+
+  <!-- =============================
+       JavaScript for Interactive Hero
+  ============================== -->
+  <script>
+    const countries = {
+      australia: {
+        title: "Study, Work & Live in Australia",
+        text: "Australia offers world-class education, skilled migration, and vibrant lifestyle opportunities.",
+        offer: "🇦🇺 Free student visa counseling for Australia this month!",
+        video: "/static/study.mp4"
+      },
+      canada: {
+        title: "Discover Opportunities in Canada",
+        text: "Canada is known for high living standards, strong economy, and PR pathways.",
+        offer: "🍁 Express Entry fast-track for skilled workers!",
+        video: "/static/Canada.mp4"
+      },
+      usa: {
+        title: "Live the American Dream",
+        text: "The USA offers diverse opportunities for students, entrepreneurs, and skilled workers.",
+        offer: "🇺🇸 Student visa fee waiver for early applicants!",
+        video: "/static/USA.mp4"
+      },
+      uk: {
+        title: "Work, Study & Settle in the UK",
+        text: "UK is a global hub for education, business, and healthcare professionals.",
+        offer: "🎓 Scholarship opportunities available for UK universities.",
+        video: "/static/UK.mp4"
+      },
+      newzealand: {
+        title: "New Zealand Awaits You",
+        text: "Safe, beautiful, and full of opportunities for skilled workers and students.",
+        offer: "🌏 Free work visa assessment for New Zealand!",
+        video: "/static/Australia.mp4"
+      },
+      germany: {
+        title: "Your Future in Germany",
+        text: "Germany is Europe’s strongest economy with top universities and job opportunities.",
+        offer: "🇩🇪 Zero tuition fee universities available in Germany!",
+        video: "/static/Europe.mp4"
+      },
+      europe: {
+        title: "Explore Europe",
+        text: "The EU offers Schengen visas, education options, and work opportunities across 26 nations.",
+        offer: "🌍 Easy Schengen Visa application support.",
+        video: "/static/EU.mp4"
+      },
+      singapore: {
+        title: "Singapore: Gateway to Asia",
+        text: "Singapore is a global business hub with top universities and high-paying jobs.",
+        offer: "🇸🇬 Priority processing for work visas in Singapore.",
+        video: "/static/Singapore.mp4"
+      }
+    };
+
+    function selectCountry(country) {
+      // Update hero text
+      document.getElementById("hero-title").textContent = countries[country].title;
+      document.getElementById("hero-text").textContent = countries[country].text;
+      document.getElementById("marquee-text").textContent = countries[country].offer;
+
+      // Update hero video
+      const video = document.getElementById("hero-video");
+      video.src = countries[country].video || video.src;
+      video.load();
+      video.play();
+
+      // Scroll to hero
+      document.getElementById("hero").scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,479 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container my-5">
+  <div class="row align-items-center">
+    <!-- Left Side Image -->
+    <div class="col-md-5 mb-3 mb-md-3" data-aos="fade-right">
+      <div class='logo-text'>
+        <div class="animation-logo">
+          <img src="/static/images_logo.jpg" alt="Description" class="img-fluid rounded shadow">
+        </div>
+      </div>
+    </div>        
+    <!-- Right Side Text and Button -->
+    <div class="col-md-6 text-center text-md-start">
+      <h1 class="mb-5 heading_text">Welcome to </h1>
+        <h2 class="mb-3">𝔽𝕃𝕐 𝔻ℝ𝔼𝔸𝕄 𝕆𝕍𝔼ℝ𝕊𝔼𝔸𝕊</h2>
+          <p class="lead">
+          Fly Dream Overseas is a trusted and well-established immigration consulting firm, dedicated to assisting individuals in achieving their international education and travel goals. With a strong reputation for excellence, we have successfully guided thousands of applicants in securing admissions to prestigious institutions and facilitating seamless travel experiences.
+
+Specializing in study and tourist visa services, we provide expert guidance and a streamlined application process, ensuring a smooth and hassle-free experience. Our firm also offers passport and visa assistance, prioritizing professionalism, transparency, and client satisfaction.
+
+At Fly Dream Overseas, we are committed to the highest standards of integrity, confidentiality, and ethical service. Our goal is to empower our clients with the right opportunities and support them at every step of their journey. For further inquiries, please contact our team or visit our office. 
+          </p>
+          <a href="/About_Us" class="btn btn-primary btn-lg custom-btn">Read More</a>
+    </div>
+  </div>
+</div>
+<!-- HERO -->
+  <header id="home" class="zero">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-9">
+          <div class="p-4 p-md-5 rounded-4 glass">
+            <span class="badge badge-soft rounded-pill px-3 py-2 mb-3">Trusted Immigration Guidance</span>
+            <h1 class="display-5 fw-bold mb-3">Move Abroad with Confidence</h1>
+            <p class="lead mb-4">Explore study, work, tourist, and permanent residence visas. Background changes every second to keep things lively.</p>
+
+            <form class="row g-2 g-md-3 align-items-end">
+              <div class="col-12 col-md-5">
+                <label class="form-label text-white-50 badge badge-soft rounded-pill px-3 py-2 mb-3">Select Destination Country</label>
+                <select class="form-select form-select-lg">
+                  <option selected>Choose...</option>
+                  <option>Canada</option>
+                  <option>USA</option>
+                  <option>United Kingdom</option>
+                  <option>Australia</option>
+                  <option>New Zealand</option>
+                  <option>Germany</option>
+                </select>
+              </div>
+              <div class="col-12 col-md-5">
+                <label class="form-label text-white-50 badge badge-soft rounded-pill px-3 py-2 mb-3">Visa Type</label>
+                <select class="form-select form-select-lg">
+                  <option selected>Choose...</option>
+                  <option>Study Visa</option>
+                  <option>Work Visa</option>
+                  <option>Tourist Visa</option>
+                  <option>Business Visa</option>
+                  <option>Permanent Residence (PR)</option>
+                  <option>Family / Spouse</option>
+                </select>
+              </div>
+              <div class="col-12 col-md-2 d-grid">
+                <a href="/form" class="btn btn-primary btn-lg rounded-4">Check Options</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- VISA TYPES -->
+  <section id="visas" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title mb-4 text-center">Popular Visa Categories</h2>
+      <div class="row g-4">
+        <!-- Study Visa -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card visa-card h-100">
+            <div class="card-body p-4 d-flex">
+              <div class="icon-circle me-2">🎓</div>
+              <div>
+                <h5 class="card-title mb-1">Study Visa</h5>
+                <p class="card-text text-muted">For undergraduate, postgraduate and research programs with work options.</p>
+                <a href="/studyvisa" class="link-primary">Learn more →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Work Visa -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card visa-card h-100">
+            <div class="card-body p-4 d-flex">
+              <div class="icon-circle me-2">💼</div>
+              <div>
+                <h5 class="card-title mb-1">Visitor Visa</h5>
+                <p class="card-text text-muted">Explore new destinations tourist visas for multiple countries.</p>
+                <a href="/visitorvisa" class="link-primary">Learn more →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Tourist Visa -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card visa-card h-100">
+            <div class="card-body p-4 d-flex">
+              <div class="icon-circle me-2">🧳</div>
+              <div>
+                <h5 class="card-title mb-1">Tourist Visa</h5>
+                <p class="card-text text-muted">Short stays for holidays, conferences and family visits.</p>
+                <a href="/touristvisa" class="link-primary">Learn more →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Business Visa -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card visa-card h-100">
+            <div class="card-body p-4 d-flex">
+              <div class="icon-circle me-2">📈</div>
+              <div>
+                <h5 class="card-title mb-1">Business Visa</h5>
+                <p class="card-text text-muted">For meetings, investments and trade activities abroad.</p>
+                <a href="/businessvisa" class="link-primary">Learn more →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- PR -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card visa-card h-100">
+            <div class="card-body p-4 d-flex">
+              <div class="icon-circle me-2">🏠</div>
+              <div>
+                <h5 class="card-title mb-1">Permanent Residence (PR)</h5>
+                <p class="card-text text-muted">Points-based and family-class pathways to settle permanently.</p>
+                <a href="/residence" class="link-primary">Learn more →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Family / Spouse -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card visa-card h-100">
+            <div class="card-body p-4 d-flex">
+              <div class="icon-circle me-2">👨‍👩‍👧‍👦</div>
+              <div>
+                <h5 class="card-title mb-1">Family & Spouse</h5>
+                <p class="card-text text-muted">Reunite with loved ones through spouse and dependent visas.</p>
+                <a href="/familysvisa" class="link-primary">Learn more →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ELIGIBILITY / FAQs -->
+  <section id="eligibility" class="py-5">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-6">
+          <h3 class="mb-3">Eligibility Checklist</h3>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Valid passport & travel history</li>
+            <li class="list-group-item">Proof of funds / income</li>
+            <li class="list-group-item">Offer letter / acceptance (if applicable)</li>
+            <li class="list-group-item">English or local language proficiency</li>
+            <li class="list-group-item">Medical & police clearance</li>
+          </ul>
+        </div>
+        <div class="col-lg-6" id="faqs">
+          <h3 class="mb-3">FAQs</h3>
+          <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="q1"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a1">How long does a visa take?</button></h2>
+              <div id="a1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">Processing time depends on the country and visa category. Expect anywhere from 2 weeks to several months.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="q2"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2">Can I work while studying?</button></h2>
+              <div id="a2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">Most study visas allow limited part‑time work during term and full‑time during breaks. Check country rules.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="q3"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3">Do you help with SOPs and documentation?</button></h2>
+              <div id="a3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">Yes, our team provides end‑to‑end support including SOPs, forms, and document review.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!--3 country we serve-->
+<div class="container py-5 ">
+    <h2 class="text-center text-black mb-5">𝓒𝓞𝓤𝓝𝓣𝓡𝓘𝓔𝓢 𝓦𝓔 𝓢𝓔𝓡𝓥𝓔 </h2>
+    <div class="row g-4">
+
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="country-card">
+          <a href="/canada">
+          <img src="https://flagcdn.com/w320/ca.png" alt="Canada Flag">
+          <div class="card-overlay">
+            <h4>Canada</h4>
+            <p>Work Visa & Study Visa opportunities in Canada.</p>
+          </div>
+        </a>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="country-card">
+        <a href="/USA">
+          <img src="https://flagcdn.com/w320/us.png" alt="USA Flag">
+          <div class="card-overlay">
+            <h4>USA</h4>
+            <p>Immigration, H1B, and Student Visas for USA.</p>
+          </div>
+        </a>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="country-card">
+        <a href="/United_Kingdom">
+          <img src="https://flagcdn.com/w320/gb.png" alt="UK Flag">
+          <div class="card-overlay">
+            <h4>United Kingdom</h4>
+            <p>Study & Work Visa programs in the UK.</p>
+          </div>
+        </a>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-md-4">
+        <div class="country-card">
+        <a href="/Australia">
+          <img src="https://flagcdn.com/w320/au.png" alt="Australia Flag">
+          <div class="card-overlay">
+            <h4>Australia</h4>
+            <p>Skilled Migration & Education in Australia.</p>
+          </div>
+        </a>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="col-md-4">
+        <div class="country-card">
+        <a href="/Europe">
+          <img src="https://flagcdn.com/w320/eu.png" alt="New Zealand Flag">
+          <div class="card-overlay">
+            <h4>Europe</h4>
+            <p>Work, Study & Permanent Residency options.</p>
+          </div>
+        </a>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="col-md-4">
+        <div class="country-card">
+          <a href="/Germany">
+          <img src="https://flagcdn.com/w320/sg.png" alt="Germany Flag">
+          <div class="card-overlay">
+            <h4>Singapore</h4>
+            <p>Work & Study programs in Germany.</p>
+          </div>
+        </a>
+        </div>
+      </div>
+
+    </div>
+</div>
+<!--4 our survice-->
+
+  <header class="py-4 text-center text-primary fw-bold" style="font-family: 'Open Sans', sans-serif; background: linear-gradient(135deg, #eaf2f8, #f7fafc); border-bottom: 3px solid #1a3d6d;">
+    <h1>𝕆𝕌ℝ 𝕊𝔼ℝ𝕍𝕀ℂ𝔼𝕊</h1>
+<div class="text-dark">
+<p>𝘍𝘭𝘺 𝘋𝘳𝘦𝘢𝘮 𝘖𝘷𝘦𝘳𝘴𝘦𝘢𝘴 𝘰𝘧𝘧𝘦𝘳𝘴 𝘦𝘹𝘱𝘦𝘳𝘵 𝘨𝘶𝘪𝘥𝘢𝘯𝘤𝘦 𝘧𝘰𝘳 𝘚𝘵𝘶𝘥𝘺 𝘢𝘯𝘥 𝘛𝘰𝘶𝘳𝘪𝘴𝘵 𝘝𝘪𝘴𝘢𝘴, 𝘦𝘯𝘴𝘶𝘳𝘪𝘯𝘨 𝘢 𝘴𝘮𝘰𝘰𝘵𝘩<br>
+𝘢𝘱𝘱𝘭𝘪𝘤𝘢𝘵𝘪𝘰𝘯 𝘱𝘳𝘰𝘤𝘦𝘴𝘴 𝘸𝘪𝘵𝘩 𝘱𝘳𝘰𝘧𝘦𝘴𝘴𝘪𝘰𝘯𝘢𝘭𝘪𝘴𝘮 𝘢𝘯𝘥 𝘪𝘯𝘵𝘦𝘨𝘳𝘪𝘵𝘺.</p>
+  </header>
+</div>
+  <main class="container my-5">
+    <div class="row g-4">
+      <!-- Card Template -->
+      <div class="col-md-4">
+        <div class="card h-100 service-card border-end border-bottom border-3 border-primary shadow-sm">
+          <div class="card-img-container overflow-hidden">
+            <img src="/static/study-visa.webp" class="card-img-top service-img" alt="Study Visa" />
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title fw-semibold">Study Visa</h5>
+            <p class="card-text flex-grow-1">We help students secure admissions in top global institutions, making their dream of studying abroad a reality.</p>
+            <a href="/studyvisa" class="btn btn-service mt-3 align-self-start">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100 service-card border-end border-bottom border-3 border-primary shadow-sm">
+          <div class="card-img-container overflow-hidden">
+            <img src="/static/turist-visa.jpg" class="card-img-top service-img" alt="Tourist Visa" />
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title fw-semibold">Tourist Visa</h5>
+            <p class="card-text flex-grow-1">Explore new destinations hassle-free with our expert guidance on obtaining tourist visas for multiple countries.</p>
+            <a href="/touristvisa" class="btn btn-service mt-3 align-self-start">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100 service-card border-end border-bottom border-3 border-primary shadow-sm">
+          <div class="card-img-container overflow-hidden">
+            <img src="/static/business-visa.jpg" class="card-img-top service-img" alt="Business Visa" />
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title fw-semibold">Business Visa</h5>
+            <p class="card-text flex-grow-1">Facilitating business professionals with smooth visa processing to explore international opportunities and investments.</p>
+            <a href="/businessvisa" class="btn btn-service mt-3 align-self-start">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100 service-card border-end border-bottom border-3 border-primary shadow-sm">
+          <div class="card-img-container overflow-hidden">
+            <img src="/static/permanent Residence.jpg" class="card-img-top service-img" alt="Permanent Residence" />
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title fw-semibold">Permanent Residence</h5>
+            <p class="card-text flex-grow-1">Assisting individuals in obtaining permanent residency, helping them settle in their desired country for a better future.</p>
+            <a href="/residence" class="btn btn-service mt-3 align-self-start">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100 service-card border-end border-bottom border-3 border-primary shadow-sm">
+          <div class="card-img-container overflow-hidden p-2">
+            <img src="/static/family2.jpeg" class="card-img-top service-img" alt="Family Visa" />
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title fw-semibold">Family Visa</h5>
+            <p class="card-text flex-grow-1">Helping families reunite by processing visas efficiently for spouses, children, and dependent family members.</p>
+            <a href="/familysvisa" class="btn btn-service mt-3 align-self-start">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100 service-card border-end border-bottom border-3 border-primary shadow-sm">
+          <div class="card-img-container overflow-hidden">
+            <img src="/static/visitor-visa.jpg" class="card-img-top service-img" alt="Visitor Visa" />
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title fw-semibold">Visitor Visa</h5>
+            <p class="card-text flex-grow-1">Get short-term visas for family visits, medical treatment, or other temporary stays with our expert assistance.</p>
+            <a href="/visitorvisa" class="btn btn-service mt-3 align-self-start">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+<!--5 Team members area-->
+ <!-- Page Header -->
+<header class="team-header text-center text-white d-flex align-items-center">
+  <div class="container bg-dark rounded-top" data-aos="fade-down">
+    <h1 class="display-4 fw-bold">Meet Our Team</h1>
+    <p class="lead">The people who make the magic happen ✨</p>
+  </div>
+</header>
+<!-- Team Members Section -->
+<section class="py-5">
+  <div class="container">
+    <div class="row text-center">    
+      <!-- Team Member -->
+      <div class="col-md-4 mb-4" data-aos="fade-up">
+        <div class="team-card p-4 shadow rounded">
+          <img src="https://cdn-icons-png.flaticon.com/512/2922/2922510.png" alt="Team Member" class="team-img mb-3" height='200 px'>
+          <h4 class="fw-bold">John Smith</h4>
+          <p class="text-muted">CEO & Founder</p>
+          <p>Leading our vision with creativity, strategy, and dedication.</p>
+        </div>
+      </div>
+      <!-- Team Member -->
+      <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="team-card p-4 shadow rounded">
+          <img src="https://cdn-icons-png.flaticon.com/512/2922/2922561.png" alt="Team Member" class="team-img mb-3"height='200 px'>
+          <h4 class="fw-bold">Sarah Johnson</h4>
+          <p class="text-muted">Marketing Head</p>
+          <p>Crafting strategies that connect people with our mission.</p>
+        </div>
+       </div>
+
+      <!-- Team Member -->
+      <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="400">
+        <div class="team-card p-4 shadow rounded">
+          <img src="https://cdn-icons-png.flaticon.com/512/2922/2922656.png" alt="Team Member" class="team-img mb-3"height='200 px'>
+          <h4 class="fw-bold">David Lee</h4>
+          <p class="text-muted">Lead Developer</p>
+          <p>Turning ideas into seamless, functional, and innovative solutions.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- Why Choose Us Section -->
+  <section class="bg-secondary py-5">
+    <div class="container text-center">
+      <h2 class="mb-4 text-primary fw-bold">Why Choose Us?</h2>
+      <p class="lead mb-5 text-white">Our expertise and dedication make your immigration process seamless.</p>
+
+      <div class="row g-4">
+        <div class="col-md-3">
+          <div class="card feature-card">
+            <div class="card-body">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bank2" viewBox="0 0 16 16">
+              <path d="M8.277.084a.5.5 0 0 0-.554 0l-7.5 5A.5.5 0 0 0 .5 6h1.875v7H1.5a.5.5 0 0 0 0 1h13a.5.5 0 1 0 0-1h-.875V6H15.5a.5.5 0 0 0 .277-.916zM12.375 6v7h-1.25V6zm-2.5 0v7h-1.25V6zm-2.5 0v7h-1.25V6zm-2.5 0v7h-1.25V6zM8 4a1 1 0 1 1 0-2 1 1 0 0 1 0 2M.5 15a.5.5 0 0 0 0 1h15a.5.5 0 1 0 0-1z"/>
+              </svg>
+              <h5 class="card-title">10+ Years of Experience</h5>
+              <p class="card-text text-warning">Trusted by thousands of clients worldwide.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card feature-card">
+            <div class="card-body">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+              </svg>
+              <h5 class="card-title">5000+ Visa Approvals</h5>
+              <p class="card-text text-warning">Proven track record of successful applications.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card feature-card">
+            <div class="card-body">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg>
+              <h5 class="card-title">98% Success Rate</h5>
+              <p class="card-text text-warning">We maximize your chances of approval.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card feature-card">
+            <div class="card-body">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trophy-fill" viewBox="0 0 16 16">
+            <path d="M2.5.5A.5.5 0 0 1 3 0h10a.5.5 0 0 1 .5.5q0 .807-.034 1.536a3 3 0 1 1-1.133 5.89c-.79 1.865-1.878 2.777-2.833 3.011v2.173l1.425.356c.194.048.377.135.537.255L13.3 15.1a.5.5 0 0 1-.3.9H3a.5.5 0 0 1-.3-.9l1.838-1.379c.16-.12.343-.207.537-.255L6.5 13.11v-2.173c-.955-.234-2.043-1.146-2.833-3.012a3 3 0 1 1-1.132-5.89A33 33 0 0 1 2.5.5m.099 2.54a2 2 0 0 0 .72 3.935c-.333-1.05-.588-2.346-.72-3.935m10.083 3.935a2 2 0 0 0 .72-3.935c-.133 1.59-.388 2.885-.72 3.935"/>
+            </svg>
+              <h5 class="card-title">Professional-Hassle-Free</h5>
+              <p class="card-text text-warning">Guiding you at every step of the process.</p>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock content %}

@@ -1,0 +1,63 @@
+ <!-- footer content -->
+
+  <footer class="footer-gradient text-white py-5">
+    <div class="container">
+      <div class="row gy-4">
+        <!-- Contact Info -->
+        <div class="col-md-4">
+          <h5>Contact Us</h5>
+          <ul class="list-unstyled footer-links">
+            <li><a href="/Contact"><i class="fas fa-phone-alt me-2"></i>Contact</a></li>
+            <li><a href="mailto:info@example.com"><i class="fas fa-envelope me-2"></i>Email</a></li>
+            <li><a href="https://facebook.com" target="_blank" rel="noopener"><i class="fab fa-facebook-f me-2"></i>Facebook</a></li>
+            <li><a href="https://instagram.com" target="_blank" rel="noopener"><i class="fab fa-instagram me-2"></i>Instagram</a></li>
+          </ul>
+        </div>
+
+        <!-- Map -->
+        <div class="col-md-8">
+          <h5>Our Location</h5>
+          <div class="map-responsive rounded shadow-sm">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.086927927019!2d-122.4194154846813!3d37.77492977975944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c5f0c6b3d%3A0x4a7f0a7a7a7a7a7a!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1691500000000!5m2!1sen!2sus"
+              width="100%"
+              height="300"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Google Map"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+
+      <hr class="my-4 border-light opacity-25" />
+
+      <div class="text-center small">
+        &copy; 2025 Your Company. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS Animation JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const heroImages = [
+      'https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=1920&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1502920917128-1aa500764cbd?q=80&w=1920&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1549641206-7fbd0882d63f?q=80&w=1920&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?q=80&w=1920&auto=format&fit=crop'
+    ];
+    heroImages.forEach(src => { const i = new Image(); i.src = src; });
+  </script>
+</body>
+</html>
